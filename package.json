@@ -2,7 +2,7 @@
   "name": "@baianat/dropper",
   "version": "0.0.0",
   "description": "A drag and drop file upload library that it friendly and fun to use. It offers great accessibility, validation and a smooth user experience.",
-  "main": "dist/js/uploader.js",
+  "main": "dist/js/dropper.js",
   "files": [
     "dist/js/*.js",
     "dist/css/*.css"
@@ -44,9 +44,5 @@
       "name": "Abdelrahman3D",
       "email": "abdelrahman3d@gmail.com"
     }
-  ],
-  "optionalDependencies": {},
-  "dependencies": {
-    "url": "^0.11.0"
-  }
+  ]
 }
