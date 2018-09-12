@@ -1,0 +1,37 @@
+.dropper
+  margin: 20px
+  border: 2px dashed $gray
+  background-color: $lightGray
+  border-radius: 4px
+  appearance: none
+  margin: auto
+  padding: 30px
+  max-width: 600px
+  &:hover
+    cursor: pointer
+  *
+    box-sizing: border-box
+
+  &__highlight
+    border-color: $blue
+
+  &__input
+    display: none
+
+  &__label
+    display: block
+    text-align: center
+    user-select: none
+    pointer-events: none
+
+  &__files
+    padding-top: 20px
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    &:empty
+      display: none
+
+  &__icon
+    width: 24px
+    height: 24px

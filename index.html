@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>File dropper</title>
+  <link rel="stylesheet" href="dist/css/uploader.css">
+</head>
+<body>
+
+  <form action="/upload" class="dropper" id="dropper"></form>  
+  <script src="dist/js/dropper.js"></script>
+  <script>
+    let dropper = new Dropper('#dropper', {
+      url: "http://localhost:5000"
+    });
+    dropper.on('uploadSucceed', ($file) => {
+      console.log('🤩', $file.name, 'uploaded successfully');
+    })
+    dropper.on('uploadFailed', ($file) => {
+      console.log('😭', $file.name, 'uploading failed');
+    })
+    dropper.on('fileDeleted', ($file) => {
+      console.log('😪', $file.name, 'was deleted');
+    })
+  </script>
+</body>
+</html>

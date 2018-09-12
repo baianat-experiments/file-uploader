@@ -1,0 +1,110 @@
+.dropper-file
+  display: block
+  position: relative
+  overflow: hidden
+  box-sizing: border-box
+  margin: 5px
+  padding: 5px
+  width: 100px
+  height: 100px
+  border: 0
+  border-radius: 0px
+  user-select: none
+  background-color: $white
+
+  &__image
+    max-width: 100%
+    object-fit: cover
+
+  &__legend
+    display: none
+
+  &__icon
+    width: 75%
+    margin: auto
+    fill: $gray
+  &__info
+    position: absolute
+    bottom: 0
+    left: 5px
+    right: 0
+    z-index: 3
+    text-align: center
+    overflow: hidden
+    width: calc(100% - 10px)
+    display: flex
+    flex-direction: column
+    &-name
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      width: 100%
+      color: $black
+      font-size: 10px
+      font-weight: bold
+    &-size
+      color: $gray
+      font-size: 7px
+
+  &__delete
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 5
+    margin: 8px
+    fill: $red
+    display: none;
+    ~/:focus &
+      display: block;
+
+  &__progress
+    position: absolute
+    top: calc(50% - 5px)
+    left: 10%
+    z-index: 2
+    margin: auto
+    width: 80%
+    height: 10px
+    transition: 0.4s
+    /* Reset the default appearance */
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+    &::-webkit-progress-bar
+      border-radius: 2px
+      background-color: $lightGray
+      box-shadow: 0 2px 5px $shadow inset
+
+    &::-webkit-progress-value
+      border-radius: 2px
+      background-image: -webkit-linear-gradient(
+        -45deg,
+        transparent 33%,
+        $shadow 33%,
+        $shadow 66%,
+        transparent 66%
+      ), -webkit-linear-gradient(
+        top,
+        alpha($white, 0.25),
+        $shadow
+      ), -webkit-linear-gradient(left, $green, $green)
+      background-size: 35px 20px, 100% 100%, 100% 100%
+
+    &::-moz-progress-bar
+      border-radius: 2px
+      background-image: -moz-linear-gradient(
+        -45deg,
+        transparent 33%,
+        $shadow 33%,
+        $shadow 66%,
+        transparent 66%
+      ), -moz-linear-gradient(
+        top,
+        alpha($white, 0.25),
+        $shadow
+      ), -moz-linear-gradient(left, $green, $green)
+      background-size: 35px 20px, 100% 100%, 100% 100%
+
+    &--hidden
+      opacity: 0
