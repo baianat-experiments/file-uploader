@@ -1,6 +1,6 @@
 {
   "name": "@baianat/dropper",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A drag and drop file upload library that it friendly and fun to use. It offers great accessibility, validation and a smooth user experience.",
   "main": "dist/js/dropper.js",
   "module": "dist/js/dropper.esm.js",
