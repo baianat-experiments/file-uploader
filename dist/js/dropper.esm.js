@@ -1,5 +1,5 @@
 /**
-    * v0.0.0
+    * v0.0.1
     * (c) 2018 Baianat
     * @license MIT
     */

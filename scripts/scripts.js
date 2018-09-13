@@ -23,12 +23,12 @@ async function buildESM () {
     banner: script.banner
   });
 
-  const filePath = path.join(script.paths.dist, 'uploader.esm.js');
+  const filePath = path.join(script.paths.dist, 'dropper.esm.js');
 
   fs.writeFileSync(filePath, code);
 
   const stats = script.utils.stats({ path: filePath, code });
-  console.log(`${chalk.green('👍 Output File:')} ${`uploader.esm.js ${stats}`.padStart(45, ' ')}`);
+  console.log(`${chalk.green('👍 Output File:')} ${`dropper.esm.js ${stats}`.padStart(45, ' ')}`);
 }
 
 async function buildScripts () {

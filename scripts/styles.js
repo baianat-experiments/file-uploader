@@ -19,7 +19,7 @@ async function buildStyles () {
       fs.writeFileSync(style.output, css);
       console.log(chalk.green('👍 Stylesheet built successfully.'));
       if (!isProduction) return
-      const filePath = path.join(style.dist, 'uploader.min.css');
+      const filePath = path.join(style.dist, 'dropper.min.css');
       fs.writeFileSync(filePath, uglifycss.processString(css));
     });
 }
