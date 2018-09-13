@@ -46,7 +46,8 @@ let dropper = new Dropper('#dropper', {
 ### Events Listeners
 
 `dropper` comes with may events that helps you to track file uploading and status
-|event name       | description                             |
+
+| event name      | description                             |
 |-----------------|-----------------------------------------|
 | `uploadFailed`  | emits when a file uploaded successfully |
 | `uploadSuccees` | emits when a file failed to upload      |
