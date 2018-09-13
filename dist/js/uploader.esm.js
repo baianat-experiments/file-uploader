@@ -191,7 +191,7 @@ var Dropper = function () {
             file: file,
             type: type,
             ext: ext,
-            id: Uploader.id++
+            id: Dropper.id++
           });
           this.uploadFile(this.files[index]);
           this.previewFile(this.files[index]);
@@ -210,6 +210,8 @@ var Dropper = function () {
           }
         }
       }
+
+      this.input.value = '';
     }
   }, {
     key: 'previewFile',
