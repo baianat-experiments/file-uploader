@@ -35,7 +35,7 @@ You need a form element to bind `dropper` to it.
 <form class="dropper" id="dropper"></form>
 ```
 
-Then create new `dropper` instance, you have to path uploading url to it
+Then create new `dropper` instance, you have to path the uploading url to it
 
 ```js
 let dropper = new Dropper('#dropper', {
